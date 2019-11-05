@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class SearchDatabase {
 
     private BakeryDatabase bakeryDatabase;
@@ -15,6 +17,19 @@ public class SearchDatabase {
 
     public void setBakeryDatabase(BakeryDatabase bakeryDatabase) {
         this.bakeryDatabase = bakeryDatabase;
+    }
+
+    public String userInput(String prompt) {
+
+        System.out.print(prompt);
+
+//        Scanner kb = new Scanner(System.in);
+//
+//        String returnValue = kb.nextLine();
+//
+//        return returnValue;
+
+      return (new Scanner(System.in)).nextLine();
     }
 
     public BakeryDatabase searchDietRestriction(String dietRestriction) {
