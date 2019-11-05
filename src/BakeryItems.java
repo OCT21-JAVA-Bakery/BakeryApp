@@ -1,4 +1,7 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class BakeryItems {
@@ -43,6 +46,21 @@ public class BakeryItems {
         this.expDate = expDate;
     }
 
+    public void setExpDate(String expDateString) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        // Date expDate = (new SimpleDateFormat("dd/MM/yyyy")).parse(expDateString);
+
+        Date expDate = null;
+        try {//if this shows error
+            expDate = simpleDateFormat.parse(expDateString);
+            this.expDate = expDate;
+        } catch (ParseException e) { //correct the date
+            this.expDate = Calendar.getInstance().getTime();
+        }
+
+
+    }
+
     public ArrayList<String> getDietRestriction() {
         return dietRestriction;
     }
@@ -57,5 +75,16 @@ public class BakeryItems {
 
     public void setNumInStock(int numInStock) {
         this.numInStock = numInStock;
+    }
+
+    @Override
+    public String toString() {
+        return "BakeryItems{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", expDate=" + expDate +
+                ", dietRestriction=" + dietRestriction +
+                ", numInStock=" + numInStock +
+                '}';
     }
 }
