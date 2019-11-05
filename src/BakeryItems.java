@@ -47,7 +47,7 @@ public class BakeryItems {
     }
 
     public void setExpDate(String expDateString) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
         // Date expDate = (new SimpleDateFormat("dd/MM/yyyy")).parse(expDateString);
 
         Date expDate = null;
@@ -79,15 +79,13 @@ public class BakeryItems {
 
     @Override
     public String toString() {
-
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
-
-        return "BakeryItems \n" +
-                "Name: " + name + '\n' +
-                "Price:" + price +'\n' +
-                "ExpDate: " + simpleDateFormat.format(expDate)+'\n' +
-                "DietRestriction: " + dietRestriction +'\n' +
+        return
+                "\nName:            " + name + '\n' +
+                "Price:             " + price +'\n' +
+                "Expiration Date:   " + simpleDateFormat.format(expDate)+'\n' +
+                "Diet Restriction:  " + dietRestriction +'\n' +
                 "Quantity in Stock: " + numInStock
                 ;
     }

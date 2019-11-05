@@ -49,9 +49,7 @@ public class PopulateDatabase {
             item2.setExpDate("11/22/2019");
             item2.setDietRestriction(new ArrayList<String>(
                     Arrays.asList(
-                            "Free of gluten" ,
                             "Free of diary",
-                            "Free of eggs",
                             "Free of soy" ,
                             "Free of tree nuts",
                             "Free of sesame")
@@ -65,15 +63,74 @@ public class PopulateDatabase {
             item3.setPrice(5.00);
             item3.setExpDate("11/19/2019");
             Collections.addAll(  item3.getDietRestriction() ,
-                                    "Free of gluten" ,
                                     "Free of diary",
                                     "Free of eggs",
-                                    "Free of soy" ,
                                     "Free of tree nuts",
                                     "Free of sesame");
             item3.setNumInStock(10);
             bakerydb.add(item3);
 
+            BakeryItems item4 = new BakeryItems();
+            item4.setName("Cinnamon Bread");
+            item4.setPrice(10.95);
+            item4.setExpDate("11/25/2019");
+            Collections.addAll(  item4.getDietRestriction() ,
+                    "Free of gluten" ,
+                    "Free of diary",
+                    "Free of soy" ,
+                    "Free of sesame");
+            item3.setNumInStock(10);
+            bakerydb.add(item4);
+
+            BakeryItems item5 = new BakeryItems();
+            item5.setName("Cinnamon Raisin Bread");
+            item5.setPrice(10.95);
+            item5.setExpDate("11/12/2019");
+            Collections.addAll(item5.getDietRestriction(),
+                    "Free of diary",
+                    "Free of eggs",
+                    "Free of soy" ,
+                    "Free of tree nuts",
+                    "Free of sesame");
+            item5.setNumInStock(10);
+            bakerydb.add(item5);
+
+            BakeryItems item6 = new BakeryItems();
+            item6.setName("Soft Pizza Crust");
+            item6.setPrice(6.95);
+            item6.setExpDate("11/20/2019");
+            Collections.addAll(  item6.getDietRestriction() ,
+                    "Free of gluten" ,
+                    "Free of diary",
+                    "Free of eggs",
+                    "Free of tree nuts");
+            item6.setNumInStock(10);
+            bakerydb.add(item6);
+
+            BakeryItems item7 = new BakeryItems();
+            item7.setName("Gluten Free Dinner Rolls");
+            item7.setPrice(3.00);
+            item7.setExpDate("11/15/2019");
+            Collections.addAll(  item7.getDietRestriction() ,
+                    "Free of gluten" ,
+                    "Free of eggs",
+                    "Free of soy" ,
+                    "Free of tree nuts",
+                    "Free of sesame");
+            item7.setNumInStock(10);
+            bakerydb.add(item7);
+
+            BakeryItems item8 = new BakeryItems();
+            item8.setName("Savory Rolls");
+            item8.setPrice(3.00);
+            item8.setExpDate("11/16/2019");
+            Collections.addAll(  item8.getDietRestriction() ,
+                    "Free of gluten" ,
+                    "Free of diary",
+                    "Free of eggs",
+                    "Free of tree nuts" );
+            item8.setNumInStock(10);
+            bakerydb.add(item8);
         }
     }
 }
