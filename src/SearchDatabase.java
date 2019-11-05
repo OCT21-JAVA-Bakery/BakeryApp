@@ -33,14 +33,16 @@ public class SearchDatabase {
     }
 
     public BakeryDatabase searchDietRestriction(String dietRestriction) {
+
         BakeryDatabase returnResult = new BakeryDatabase();
+
         if (bakeryDatabase == null) // if not set berkeryDatabase yet
             return returnResult;
 
 
 
         for (BakeryItems bakeryItems : bakeryDatabase) {
-
+            inner:
             for (String eachDietRestriction : bakeryItems.getDietRestriction()) {
 
 
@@ -48,7 +50,7 @@ public class SearchDatabase {
                         eachDietRestriction.equalsIgnoreCase("free of "+dietRestriction)
                 ) {
                     returnResult.add(bakeryItems);
-                    break;
+                    break inner;
                 }
 
             }
