@@ -79,7 +79,7 @@ public class PopulateDatabase {
                     "Free of diary",
                     "Free of soy" ,
                     "Free of sesame");
-            item3.setNumInStock(10);
+            item4.setNumInStock(10);
             bakerydb.add(item4);
 
             BakeryItems item5 = new BakeryItems();
@@ -131,6 +131,90 @@ public class PopulateDatabase {
                     "Free of tree nuts" );
             item8.setNumInStock(10);
             bakerydb.add(item8);
+
+            BakeryItems item9 = new BakeryItems();
+            item9.setName("BBQ Chicken Dozen Savory Empandas");
+            item9.setPrice(39.00);
+            item9.setExpDate("11/20/2019");
+            Collections.addAll(  item9.getDietRestriction() ,
+                    "Free of gluten" ,
+                    "Free of diary");
+            item9.setNumInStock(10);
+            bakerydb.add(item9);
+
+            BakeryItems item10 = new BakeryItems();
+            item10.setName("Bread Pudding");
+            item10.setPrice(4.50);
+            item10.setExpDate("11/25/2019");
+            Collections.addAll(  item10.getDietRestriction() ,
+                    "Free of diary" ,
+                    "Free of eggs",
+                    "Free of tree nuts" );
+            item10.setNumInStock(10);
+            bakerydb.add(item10);
+
+            BakeryItems item11 = new BakeryItems();
+            item11.setName("Cinnamon Raisin Bread");
+            item11.setPrice(10.95);
+            item11.setExpDate("11/12/2019");
+            Collections.addAll(item11.getDietRestriction(),
+                    "Free of diary",
+                    "Free of eggs",
+                    "Free of tree nuts",
+                    "Free of sesame");
+            item11.setNumInStock(10);
+            bakerydb.add(item11);
+
+            BakeryItems item12 = new BakeryItems();
+            item12.setName("6-Pack of Muffins");
+            item12.setPrice(16.50);
+            item12.setExpDate("11/12/2019");
+            Collections.addAll(item12.getDietRestriction(),
+                    "Free of diary",
+                    "Free of eggs",
+                    "Free of soy" ,
+                    "Free of tree nuts");
+            item12.setNumInStock(10);
+            bakerydb.add(item12);
+
+            BakeryItems item13 = new BakeryItems();
+            item13.setName("Dozen of Donuts");
+            item13.setPrice(6.50);
+            item13.setExpDate("11/15/2019");
+            Collections.addAll(item13.getDietRestriction(),
+                    "Free of diary",
+                    "Free of eggs",
+                    "Free of soy" ,
+                    "Free of tree nuts",
+                    "Free of sesame");
+            item13.setNumInStock(10);
+            bakerydb.add(item13);
+
+            BakeryItems item14 = new BakeryItems();
+            item14.setName("White Vanilla Bread");
+            item14.setPrice(13.95);
+            item14.setExpDate("11/15/2019");
+            Collections.addAll(item14.getDietRestriction(),
+                    "Free of diary",
+                    "Free of eggs",
+                    "Free of tree nuts",
+                    "Free of sesame");
+            item14.setNumInStock(10);
+            bakerydb.add(item14);
+
+            BakeryItems item15 = new BakeryItems();
+            item15.setName("Black Bean Savory Rolls");
+            item15.setPrice(8.95);
+            item15.setExpDate("11/12/2019");
+            Collections.addAll(item15.getDietRestriction(),
+                    "Free of gluten",
+                    "Free of eggs",
+                    "Free of soy" ,
+                    "Free of tree nuts",
+                    "Free of sesame");
+            item15.setNumInStock(10);
+            bakerydb.add(item15);
+
         }
     }
 }
