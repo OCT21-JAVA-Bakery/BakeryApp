@@ -79,12 +79,16 @@ public class BakeryItems {
 
     @Override
     public String toString() {
-        return "BakeryItems{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", expDate=" + expDate +
-                ", dietRestriction=" + dietRestriction +
-                ", numInStock=" + numInStock +
-                '}';
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
+
+        return "BakeryItems \n" +
+                "Name: " + name + '\n' +
+                "Price:" + price +'\n' +
+                "ExpDate: " + simpleDateFormat.format(expDate)+'\n' +
+                "DietRestriction: " + dietRestriction +'\n' +
+                "Quantity in Stock: " + numInStock
+                ;
     }
 }
