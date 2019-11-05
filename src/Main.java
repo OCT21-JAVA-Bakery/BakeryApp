@@ -2,28 +2,33 @@ public class Main {
     public static void main(String[] args) {
 
         BakeryDatabase bakerydb = new BakeryDatabase();
-        System.out.println("Empty");
-        System.out.println(bakerydb);
 
         PopulateDatabase populateDatabase = new PopulateDatabase();
-
         populateDatabase.setBakerydb(bakerydb);
-
-        populateDatabase.addItems();
-
-        System.out.println("Populated");
-        System.out.println(bakerydb);
-
+        populateDatabase.addItems();//call addItem method from PopulateDatabase
 
         SearchDatabase searchDatabase = new SearchDatabase();
-        searchDatabase.setBakeryDatabase(bakerydb);
+        searchDatabase.setBakeryDatabase(bakerydb);//call searchDB method from SearchDatabase
+
+
+        System.out.println("Welcome to the Brookley's Better Bakery App! \n" +
+                "We contain peanut, gluten, soy and dairy in our products. \n");
+
         String toSearch;
 
         outer:
         do {
-            toSearch = searchDatabase.userInput("Diet restriction > ");
-            BakeryDatabase db2 = searchDatabase.searchDietRestriction(toSearch);
-            System.out.println(db2);
+            toSearch = searchDatabase.userInput("To search for foods that you can eat, please enter the name of the diet restriction:\n"+
+            "To see a list of all our foods, please type \"all\". > ");
+
+            if(toSearch.equalsIgnoreCase("all"))
+            {
+                System.out.println(bakerydb);
+            }
+            else {
+                BakeryDatabase db2 = searchDatabase.searchDietRestriction(toSearch);
+                System.out.println(db2);
+            }
            // boolean validInput = false;
             do {
                 String yesno;
